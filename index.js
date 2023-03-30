@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const webAppUrl = process.env.WEB_APP_URL;
+const webAppUrl = 'https://' + process.env.WEB_APP_URL;
 
 const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true });
 const app = express();
